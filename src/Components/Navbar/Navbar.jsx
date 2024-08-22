@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.svg'
+import underline from '../../assets/nav_underline.svg'
 
 const Navbar = () => {
+
+  const [menu, setMenu] = useState("home");
+
   return (
     <div className='navbar'>
         <img src={logo} alt="Logo" />
         <ul className='nav-menu'>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Expereces</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li><p onClick={()=>setMenu("home")}>Home</p>{menu==="home"?<img src={underline} alt=''/>:<></>}</li>
+            <li><p onClick={()=>setMenu("about")}>About Me</p>{menu==="about"?<img src={underline} alt=''/>:<></>}</li>
+            <li><p onClick={()=>setMenu("services")}>Expereces</p>{menu==="services"?<img src={underline} alt=''/>:<></>}</li>
+            <li><p onClick={()=>setMenu("work")}>Projects</p>{menu==="work"?<img src={underline} alt=''/>:<></>}</li>
+            <li><p onClick={()=>setMenu("contact")}>Contact</p>{menu==="contact"?<img src={underline} alt=''/>:<></>}</li>
         </ul>
         <div className='nav-connect'>
             Connect with me

@@ -10,22 +10,26 @@ const About = () => {
             <h1>About me</h1>
             <img src={theme_pattern} alt="" />
         </div>       
-        <div className="about-sections"></div> 
-        <div className="about-left">
-            <img src={profile_img} alt="" />
-        </div>
-        <div className="about-right">
-            <div className="about-para">
-                <p>pharagph 1</p>
-                <p>pharagph 2</p>
+
+        {/* New container for left and right sections */}
+        <div className="about-content">
+            <div className="about-left">
+                <img src={profile_img} alt="Profile" />
             </div>
-            <div className="about-skills">
-                <div className="about-skill"><p>HTML & CSS</p><hr style ={{width:"50%"}} /></div>
-                <div className="about-skill"><p>React JS</p><hr style ={{width:"50%"}} /></div>
-                <div className="about-skill"><p>JavaScript</p><hr style ={{width:"50%"}} /></div>
-                <div className="about-skill"><p>Next JS</p><hr style ={{width:"50%"}} /></div>
+            <div className="about-right">
+                <div className="about-para">
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 2</p>
+                </div>
+                <div className="about-skills">
+                    <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "50%" }} /></div>
+                    <div className="about-skill"><p>React JS</p><hr style={{ width: "50%" }} /></div>
+                    <div className="about-skill"><p>JavaScript</p><hr style={{ width: "50%" }} /></div>
+                    <div className="about-skill"><p>Next JS</p><hr style={{ width: "50%" }} /></div>
+                </div>
             </div>
         </div>
+
         <div className="about-achievements">
             <div className="about-achievement">
                 <h1>2+</h1>
@@ -39,7 +43,7 @@ const About = () => {
             <hr />
             <div className="about-achievement">
                 <h1>10+</h1>
-                <p>HAPPY CLAIENTS</p>
+                <p>HAPPY CLIENTS</p>
             </div>
         </div>
     </div>
